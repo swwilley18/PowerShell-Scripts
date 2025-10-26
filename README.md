@@ -23,13 +23,13 @@ A collection of PowerShell Scripts used to complete a variety of Administrative 
 - Usage: Get-CSR -RemoteServer "ServerName" -SiteName "FQDN" -Organization "Org" -OrganizationalUnit "OU" -City "City" -State "State" -CountryCode "CC"
 - Description: This function creates a Certificate Signing Request (CSR) on a remote server and moves it to a specified file server location.
 ### Parameters:
-  -RemoteServer: The target server where the CSR will be created. 
-  -SiteName: The fully qualified domain name (FQDN) of the site.
-  -Organization: The organization name.
-  -OrganizationalUnit: The organizational unit name.
-  -City: The city name.
-  -State: The state name.
-  -CountryCode: The country code (e.g., US).
+  - RemoteServer: The target server where the CSR will be created. 
+  - SiteName: The fully qualified domain name (FQDN) of the site.
+  - Organization: The organization name.
+  - OrganizationalUnit: The organizational unit name.
+  - City: The city name.
+  - State: The state name.
+  - CountryCode: The country code (e.g., US).
    
 Note: Ensure that the target server has the necessary permissions and that PowerShell remoting is enabled.
  
@@ -56,7 +56,7 @@ Note: This script can also be ran as a standalone script and will loop to create
 - Replace {Server Name} and {Path to File} in the $OutFile variable with actual values before running the script.
 - This script can be modified to return the server list instead of exporting to a file if needed.
 ### parameters:
-  -OU: The distinguished name of the Organizational Unit containing the servers.
+  - OU: The distinguished name of the Organizational Unit containing the servers.
 
 ## Set-Proxy.ps1
 - Usage: Set-Proxy -ProxyServerIP "proxyserverIPAddress" -ProxyBypassList "<local>;*.domain.com"
@@ -64,8 +64,8 @@ Note: This script can also be ran as a standalone script and will loop to create
 - This script modifies registry settings and uses netsh to configure proxy settings.
 - This script can be run as a standalone script or as a function within other scripts.
 ### parameters:
-   -ProxyServerIP: The IP address of the proxy server.
-   -ProxyBypassList: A list of domains to bypass the proxy. Example: "<local>;*.domain.com"
+   - ProxyServerIP: The IP address of the proxy server.
+   - ProxyBypassList: A list of domains to bypass the proxy. Example: "<local>;*.domain.com"
 
 ## Set-SuperUserLocalPass.ps1
 - Usage: Set-SuperUserLocalPass -AdminUsername "AdminUser" -pass "NewPassword" -server "ServerName"
@@ -73,8 +73,8 @@ Note: This script can also be ran as a standalone script and will loop to create
 - Description: This function sets the local administrator password on a remote server.
 - Note: The Get-NewPassword function can be used to generate a new password if desired and then passed into this function as a parameter.
 ### Parameters:
-   -AdminUsername: The username of the local administrator account.
-   -pass: The new password to set for the local administrator account.
-   -server: The target server where the password will be updated.
+   - AdminUsername: The username of the local administrator account.
+   - pass: The new password to set for the local administrator account.
+   - server: The target server where the password will be updated.
   
 
